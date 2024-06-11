@@ -86,7 +86,7 @@
 
             // Redireciona após garantir que o Pixel foi carregado
             var interval = setInterval(function() {
-                if (typeof fbq !== 'undefined') {
+                if (typeof fbq !== 'undefined' && fbq.instance) {  // Verificação adicional
                     clearInterval(interval);
                     window.location.href = "https://photos.app.goo.gl/5toL6QdhCGHPyzRf6";
                 }
